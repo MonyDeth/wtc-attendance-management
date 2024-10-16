@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Class Detail</title>
+  <link rel="icon" href="/favicon.ico"/>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+
+<body>
+<!--<div class="loading-overlay" id="loading-overlay">-->
+<!--  <i class="ri-loader-line loader"></i>-->
+<!--</div> &lt;!&ndash; Loading overlay &ndash;&gt;-->
+<!--<div class="page show" id="page-content">-->
+
+  <header>
+    <div class="logo">
+      <img src="images/logo.svg" alt="logo">
+    </div>
+    <nav class="menu">
+      <ul>
+        <li><a href="admin-login.html"><i class="ri-inbox-2-line"></i> Home Page</a></li>
+        <li><a href="admin-landing.html"><i class="ri-information-2-line"></i> About Page</a></li>
+        <li><a href="class-listing.html" class="active"><i class="ri-graduation-cap-line"></i> Class Management</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="content-wrapper">
+
+    <div class="page-title">
+
+      <div class="title-wrapper">
+        <a href="class-listing.html" class="item-title" style="width: 75px"><i class="ri-arrow-left-s-line"></i> Back</a>
+        <h3>Class Management</h3>
+        <p class="subtitle">All information you need to know about the class is here.</p>
+      </div>
+    </div>
+    <div class="info-container">
+      <div class="side-bar">
+        <a href="#" class="button-primary side-menu active">General Information</a>
+        <a href="#" class="button-primary side-menu">Attendance</a>
+        <a href="#" class="button-primary side-menu">Configuration</a>
+      </div>
+
+      <div class="content-area">
+        <div class="class-info-card">
+          <div>
+            <h3>Class Name</h3>
+            <p class="subtitle">Class Name will be displayed when student are checking in.</p>
+          </div>
+          <input type="text" name="text" placeholder="Web-Cloud Technology" id="Check-in-remarks"/>
+        </div>
+
+        <div class="class-info-card">
+          <div>
+            <h3>Class URL & QR Code</h3>
+            <p class="subtitle">QR Code and URL are used to open a web-page that allows students to check in for
+              attendance.</p>
+          </div>
+          <input type="text" name="text" placeholder="https://attendancemanagement.com/Y6zad8yZ" id="Check-in-remarks"/>
+          <div class="button-container align-left">
+            <div class="button-secondary bttn-filled"><i class="ri-file-copy-line ri-xl"></i> Copy URL</div>
+            <div class="button-secondary bttn-filled"><i class="ri-qr-code-line ri-xl"></i>Download QR Code</div>
+          </div>
+        </div>
+
+
+          <div class="class-info-card">
+            <div>
+              <h3>Class Name</h3>
+              <p class="subtitle">Class Name will be displayed when student are checking in.</p>
+            </div>
+            <input type="text" name="text" placeholder="Web-Cloud Technology" id="Check-in-remarks"/>
+          </div>
+          <div class="class-info-card">
+            <div>
+              <h3>Class Name</h3>
+              <p class="subtitle">Class Name will be displayed when student are checking in.</p>
+            </div>
+            <input type="text" name="text" placeholder="Web-Cloud Technology" id="Check-in-remarks"/>
+
+          </div>
+        <div class="button-container align-right" style="border-top: 1px solid #E2E8F0">
+          <div class="button-secondary" id="back-button" onclick="goBack()">Cancel</div>
+          <div class="button-primary">Save Change</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="script.js"></script> <!-- Include your script here -->
+
+</body>
+</html>
