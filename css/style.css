@@ -432,6 +432,7 @@ header {
 }
 
 .item-title {
+  font-size: 14px;
   color: #828282;
 }
 
@@ -441,11 +442,12 @@ header {
 }
 
 .item-detail {
-  margin-left: 15px;
+  font-size: 14px;
+  /*margin-left: 15px;*/
   text-align: right;
   display: flex;
   flex-direction: row;
-  gap: 4px;
+  gap: 2px;
   color: #171717;
 }
 
@@ -454,8 +456,13 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
   width: 100%;
+  gap: 10px;
+}
+.timeframe-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .class-detail-container {
@@ -474,6 +481,7 @@ header {
   align-items: center;
   height: auto;
   width: 400px;
+
   background: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.09);
   padding: 25px;
@@ -481,7 +489,19 @@ header {
   border-radius: 12px;
   gap: 12px;
 }
-
+@media (max-width: 768px) {
+  .checkin-container {
+    width: 95vw; /* Sidebar takes up 80% of the screen width */
+    padding-top: 10px; /* Adjust padding */
+  }
+  .class-icon{
+    width: 75px;
+  }
+  .Check-in-message{
+    font-size: 12px;
+    padding: 5px;
+  }
+}
 a {
   font-family: Inter, sans-serif  ;
   text-decoration: none;
@@ -1028,7 +1048,7 @@ button:hover {
 }
 
 body {
-  overflow: hidden; /* Prevent scrolling during transition */
+  overflow: auto; /* Prevent scrolling during transition */
   margin: 0;
 }
 
