@@ -192,6 +192,7 @@ header {
   transform: rotateY(360deg); /* Rotates the QR code 180 degrees */
 }
 
+
 .title-wrapper {
   display: flex;
   flex-direction: column;
