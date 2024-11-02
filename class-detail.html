@@ -101,158 +101,201 @@
           <table>
             <thead>
             <tr>
-              <th>No.</th>
-              <th>Class ID</th>
-              <th>Class Name</th>
-              <th>Created Date</th>
-              <th>No. of Students</th>
-              <th>Status</th>
-              <th>Actions</th>
+            <tr>
+              <th rowspan="2">No.</th>
+              <th rowspan="2">Student Name</th>
+              <th rowspan="2">Student Gender</th>
+              <th colspan="12">Attendance</th>
+            </tr>
+            <tr >
+              <th class="week-th">W 1</th>
+              <th class="week-th">W 2</th>
+              <th class="week-th">W 3</th>
+              <th class="week-th">W 4</th>
+              <th class="week-th">W 5</th>
+              <th class="week-th">W 6</th>
+              <th class="week-th">W 7</th>
+              <th class="week-th">W 8</th>
+              <th class="week-th">W 9</th>
+              <th class="week-th">W 10</th>
+              <th class="week-th">W 11</th>
+              <th class="week-th">W 12</th>
             </tr>
             </thead>
             <tbody>
+            <!-- Example Rows with Khmer Names Written in English -->
             <tr>
               <td>1</td>
-              <td>WCTS123</td>
-              <td>Web and Cloud Technology</td>
-              <td>2024-10-16</td>
-              <td>50</td>
-              <td><span class="status-pill">Active</span></td>
-              <td class="actions">
-                <a href="class-detail.html"><i class="ri-eye-line" ref=""><span ref=""> Detail</span></i></a>
-                <a class="open-btn" onclick="openSidebar()"><i class="ri-qr-code-line" ><span> Get QR</span></i></a>
-                <i class="ri-edit-2-line"><span> Edit</span></i>
-                <i class="ri-delete-bin-line delete-icon"><span> Delete</span></i>
-              </td>
+              <td>Sok Li</td>
+              <td>Male</td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
             </tr>
             <tr>
               <td>2</td>
-              <td>CLS124</td>
-              <td>Science 101</td>
-              <td>2024-10-17</td>
-              <td>25</td>
-              <td><span class="status-pill">Active</span></td>
-              <td class="actions">
-                <i class="ri-eye-line"><span> Detail</span></i>
-                <i class="ri-qr-code-line"><span> Get QR</span></i>
-                <i class="ri-edit-2-line"><span> Edit</span></i>
-                <i class="ri-delete-bin-line delete-icon"><span> Delete</span></i>
-              </td>
+              <td>Mao Sokha</td>
+              <td>Female</td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
             </tr>
             <tr>
               <td>3</td>
-              <td>CLS125</td>
-              <td>History 101</td>
-              <td>2024-10-18</td>
-              <td>28</td>
-              <td><span class="status-pill">Active</span></td>
-              <td class="actions">
-                <i class="ri-eye-line"><span> Detail</span></i>
-                <i class="ri-qr-code-line"><span> Get QR</span></i>
-                <i class="ri-edit-2-line"><span> Edit</span></i>
-                <i class="ri-delete-bin-line delete-icon"><span> Delete</span></i>
-              </td>
+              <td>Chea Rathanak</td>
+              <td>Male</td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
             </tr>
             <tr>
               <td>4</td>
-              <td>CLS126</td>
-              <td>English 101</td>
-              <td>2024-10-19</td>
-              <td>32</td>
-              <td><span class="status-pill">Active</span></td>
-              <td class="actions">
-                <i class="ri-eye-line"><span> Detail</span></i>
-                <i class="ri-qr-code-line"><span> Get QR</span></i>
-                <i class="ri-edit-2-line"><span> Edit</span></i>
-                <i class="ri-delete-bin-line delete-icon"><span> Delete</span></i>
-              </td>
+              <td>Sovann Veasna</td>
+              <td>Female</td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
             </tr>
             <tr>
               <td>5</td>
-              <td>CLS127</td>
-              <td>Art 101</td>
-              <td>2024-10-20</td>
-              <td>20</td>
-              <td><span class="status-pill">Active</span></td>
-              <td class="actions">
-                <i class="ri-eye-line"><span> Detail</span></i>
-                <i class="ri-qr-code-line"><span> Get QR</span></i>
-                <i class="ri-edit-2-line"><span> Edit</span></i>
-                <i class="ri-delete-bin-line delete-icon"><span> Delete</span></i>
-              </td>
+              <td>Phanith Dara</td>
+              <td>Male</td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
             </tr>
             <tr>
               <td>6</td>
-              <td>CLS128</td>
-              <td>Geography 101</td>
-              <td>2024-10-21</td>
-              <td>15</td>
-              <td><span class="status-pill">Active</span></td>
-              <td class="actions">
-                <i class="ri-eye-line"><span> Detail</span></i>
-                <i class="ri-qr-code-line"><span> Get QR</span></i>
-                <i class="ri-edit-2-line"><span> Edit</span></i>
-                <i class="ri-delete-bin-line delete-icon"><span> Delete</span></i>
-              </td>
+              <td>Kong Srey Pich</td>
+              <td>Female</td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
             </tr>
             <tr>
               <td>7</td>
-              <td>CLS129</td>
-              <td>Physics 101</td>
-              <td>2024-10-22</td>
-              <td>22</td>
-              <td><span class="status-pill">Active</span></td>
-              <td class="actions">
-                <i class="ri-eye-line"><span> Detail</span></i>
-                <i class="ri-qr-code-line"><span> Get QR</span></i>
-                <i class="ri-edit-2-line"><span> Edit</span></i>
-                <i class="ri-delete-bin-line delete-icon"><span> Delete</span></i>
-              </td>
+              <td>Chan Sophea</td>
+              <td>Male</td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
             </tr>
             <tr>
               <td>8</td>
-              <td>CLS130</td>
-              <td>Chemistry 101</td>
-              <td>2024-10-23</td>
-              <td>18</td>
-              <td><span class="status-pill">Active</span></td>
-              <td class="actions">
-                <i class="ri-eye-line"><span> Detail</span></i>
-                <i class="ri-qr-code-line"><span> Get QR</span></i>
-                <i class="ri-edit-2-line"><span> Edit</span></i>
-                <i class="ri-delete-bin-line delete-icon"><span> Delete</span></i>
-              </td>
+              <td>Lao Chenda</td>
+              <td>Female</td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
             </tr>
             <tr>
               <td>9</td>
-              <td>CLS131</td>
-              <td>Biology 101</td>
-              <td>2024-10-24</td>
-              <td>27</td>
-              <td><span class="status-pill">Active</span></td>
-              <td class="actions">
-                <i class="ri-eye-line"><span> Detail</span></i>
-                <i class="ri-qr-code-line"><span> Get QR</span></i>
-                <i class="ri-edit-2-line"><span> Edit</span></i>
-                <i class="ri-delete-bin-line delete-icon"><span> Delete</span></i>
-              </td>
+              <td>Prak Bopha</td>
+              <td>Female</td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
             </tr>
             <tr>
               <td>10</td>
-              <td>CLS132</td>
-              <td>Philosophy 101</td>
-              <td>2024-10-25</td>
-              <td>10</td>
-              <td><span class="status-pill">Active</span></td>
-              <td class="actions">
-                <i class="ri-eye-line"><span> Detail</span></i>
-                <i class="ri-qr-code-line"><span> Get QR</span></i>
-                <i class="ri-edit-2-line"><span> Edit</span></i>
-                <i class="ri-delete-bin-line delete-icon"><span> Delete</span></i>
-              </td>
+              <td>Yim Samnang</td>
+              <td>Male</td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-fill checkbox" onclick="toggleCheckbox(this)"></i></td>
+              <td><i class="ri-checkbox-blank-line checkbox" onclick="toggleCheckbox(this)"></i></td>
+
             </tr>
 
-            <!-- More rows as needed -->
             </tbody>
           </table>
         </div>

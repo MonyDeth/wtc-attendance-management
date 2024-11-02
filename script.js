@@ -154,3 +154,16 @@ function switchTab(event, sectionId) {
   event.target.classList.add('active');
 }
 
+function toggleCheckbox(element) {
+  if (element.classList.contains('ri-checkbox-blank-line')) {
+    element.classList.remove('ri-checkbox-blank-line');
+    element.classList.add('ri-checkbox-fill');
+    element.style.color = 'blue';
+  } else {
+    element.classList.remove('ri-checkbox-fill');
+    element.classList.add('ri-checkbox-blank-line');
+    element.style.color = 'unset';
+
+  }
+}
+

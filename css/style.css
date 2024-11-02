@@ -429,6 +429,14 @@ header {
   opacity: 1; /* Fully visible */
   transform: translateY(0); /* Move back to original position */
 }
+.checkbox {
+  cursor: pointer;
+  font-size: 20px;
+  transition: .3s ease;
+}
+.week-th{
+  width: 85px;
+}
 
 .content-section.active-content {
   gap: 20px; /* Adds 20px gap between child elements in the active section */
@@ -841,6 +849,8 @@ input:focus, input:hover {
   border: 1px solid #ddd;
   border-bottom: none;
   border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.09);
+
 
 }
 
