@@ -110,3 +110,47 @@ document.getElementById('screenshot-button').addEventListener('click', function 
     document.body.removeChild(link); // Remove the link after downloading
   });
 });
+
+
+function switchTab(event, sectionId) {
+  event.preventDefault();
+
+  // Get all content sections
+  var sections = document.querySelectorAll('.content-section');
+
+  // Fade out all sections
+  sections.forEach(function (section) {
+    if (section.classList.contains('active-content')) {
+      section.style.opacity = '0'; // Start fading out
+      section.style.transform = 'translateY(20px)'; // Slide down
+    }
+  });
+
+  // Wait for the fade-out transition to finish
+  setTimeout(() => {
+    // Remove active class and hide sections
+    sections.forEach(function (section) {
+      section.classList.remove('active-content'); // Remove active class
+      section.style.display = 'none'; // Hide section
+    });
+
+    // Show the selected content section
+    var selectedSection = document.getElementById(sectionId);
+    selectedSection.style.display = 'flex'; // Show section
+    setTimeout(() => {
+      selectedSection.classList.add('active-content'); // Add active class to trigger fade-in
+      selectedSection.style.opacity = '1'; // Fade in
+      selectedSection.style.transform = 'translateY(0)'; // Slide in to original position
+    }, 100); // A small delay to allow display change to take effect
+  }, 300); // Match with the CSS transition duration
+
+  // Remove 'active' class from all side-menu links
+  var links = document.querySelectorAll('.side-menu');
+  links.forEach(function (link) {
+    link.classList.remove('active');
+  });
+
+  // Add 'active' class to the clicked link
+  event.target.classList.add('active');
+}
+
