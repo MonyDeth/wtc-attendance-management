@@ -67,16 +67,42 @@ function showPopup() {
   }, 10); // Slight delay to allow display to take effect
 }
 
-function createClassPopup() {
-  const popup = document.getElementById('create-class-popup');
+function hideCreatePopup() {
+  const popup = document.getElementById('create-popup');
+  popup.classList.remove('show'); // Remove the show class to start the fade-out
+
+  // Wait for the transition to complete before hiding the popup
+  setTimeout(() => {
+    popup.style.display = 'none'; // Hide the popup after the fade-out
+  }, 300); // Match this duration with the CSS transition duration (0.3s)
+}
+
+function createPopup() {
+  const popup = document.getElementById('create-popup');
   popup.style.display = 'flex'; // Make it visible
   setTimeout(() => {
     popup.classList.add('show'); // Add the show class to start fade-in
   }, 10); // Slight delay to allow display to take effect
 }
+function confirmDelete() {
+  const confirmation = confirm("Are you sure you want to delete this class?");
+  if (confirmation) {
+    alert("Class deleted successfully.");
+  } else {
+    alert("Deletion canceled.");
+  }
+}
+function confirmResetPasswords() {
+  const confirmation = confirm("Are you sure you want to reset Password?");
+  if (confirmation) {
+    alert("Password has been successfully.");
+  } else {
+    alert("Nothing changed");
+  }
+}
 
-function hideCreateClassPopup() {
-  const popup = document.getElementById('create-class-popup');
+function hideCreateStudentPopup() {
+  const popup = document.getElementById('create-student-popup');
   popup.classList.remove('show'); // Remove the show class to start the fade-out
 
   // Wait for the transition to complete before hiding the popup
@@ -163,7 +189,6 @@ function toggleCheckbox(element) {
     element.classList.remove('ri-checkbox-fill');
     element.classList.add('ri-checkbox-blank-line');
     element.style.color = 'unset';
-
   }
 }
 

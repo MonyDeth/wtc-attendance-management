@@ -9,49 +9,40 @@
 </head>
 
 <body>
-<div id="mySidebar" class="sidebar">
-  <div class="sidebar-wrapper">
-<!--  <a href="javascript:void(0)" class="close-btn" >&times;</a>-->
-  <div class="icon-button close-btn" onclick="closeSidebar()">
-    <i class="ri-close-line ri-xl"></i>
-  </div>
-  <div class="title-wrapper">
-  <h3>QR Code Info</h3>
-    <p class="subtitle">Class:</p>
-    <p class="subtitle bold">Web and Cloud Technology</p>
-    <p class="subtitle bold">WCT202024</p>
-  </div>
-    <div class="class-qr-wrapper">
-      <img class="class-qr" src="images/qr-code.png" alt="class logo">
-    </div>
-    <div class="button-container">
-      <div class="button-secondary bttn-filled"><i class="ri-file-copy-line ri-xl"></i> Copy URL</div>
-      <div class="button-secondary bttn-filled"><i class="ri-qr-code-line ri-xl"></i>Download QR Code</div>
-    </div>
-  </div>
-</div>
-
-<div id="overlay" class="overlay" onclick="hidePopup()"></div>
+<div id="overlay" class="overlay" onclick="createPopup()"></div>
   <div class="popup" id="create-popup">
     <div class="popup-content">
       <div class="page-title">
         <div class="title-wrapper">
-          <h3>Create Class</h3>
-          <p class="subtitle">Create new class</p>
+          <h3>Create Student</h3>
+          <p>Create new student to database</p>
         </div>
         <div class="icon-button" onclick="hideCreatePopup()">
           <i class="ri-close-line ri-xl"></i>
         </div>
       </div>
-      <div class="create-class-info">
+      <div class="create-student-info">
         <div class="item-list">
-          <div class="item-title small">Class Name</div>
-          <input class="create-input" id="class-name" type="text" placeholder="Name"/>
+          <div class="item-title small">First Name</div>
+          <input class="create-input" id="student-first-name" type="text" placeholder="First Name"/>
         </div>
         <div class="item-list">
-          <div class="item-title small">Class ID</div>
-          <input class="create-input" id="class-id" type="text" placeholder="ID"/>
+          <div class="item-title small">Last Name</div>
+          <input class="create-input" id="student-last-name" type="text" placeholder="Last Name"/>
         </div>
+        <div class="item-list">
+          <div class="item-title small">Email Address</div>
+          <input class="create-input" id="class-name" type="email" placeholder="example@example.com"/>
+        </div>
+        <div class="item-list">
+          <div class="item-title small">Phone Number</div>
+          <input class="create-input" id="class-name" type="email" placeholder="012 345 678"/>
+        </div>
+        <div class="item-list">
+          <div class="item-title small">Passwords</div>
+          <input class="create-input" id="class-name" type="email" placeholder="Passwords"/>
+        </div>
+        <p class="subtitle">Passwords will be used for logging in and checking in classes</p>
       </div>
       <div class="button-container align-right">
         <div class="button-secondary cancel-btn" onclick="hideCreatePopup()">Cancel</div>
@@ -67,8 +58,8 @@
   <nav class="menu">
     <ul>
       <li><a href="admin-landing.html" ><i class="ri-information-2-line"></i> Homepage</a></li>
-      <li><a href="class-listing.html"  class="active"><i class="ri-graduation-cap-line"></i> Class Management</a></li>
-      <li><a href="student-listing.html" ><i class="ri-file-2-line"></i> Student Management</a></li>
+      <li><a href="class-listing.html"><i class="ri-graduation-cap-line"></i> Class Management</a></li>
+      <li><a href="student-listing.html" class="active" ><i class="ri-file-2-line"></i> Student Management</a></li>
       <li><a href="user-listing.html"><i class="ri-user-line"></i> User Management</a></li>
     </ul>
     <label for="profile-toggle" class="avatar-container">
@@ -102,10 +93,10 @@
     <div class="table-wrapper">
       <div class="page-title">
         <div class="title-wrapper">
-          <h3>Class Management</h3>
-          <p class="subtitle">All classes are listed here</p>
+          <h3>Student Management</h3>
+          <p class="subtitle">Student registered in the system are listed here. For their attendance, please see in each <b>Class Management</b></p>
         </div>
-        <div class="button-create" onclick="createPopup()"><i class="ri-add-fill ri-xl"></i> Create Class</div>
+        <div class="button-create" onclick="createPopup()"><i class="ri-add-fill ri-xl"></i> Create Student</div>
       </div>
 
       <div class="search-input">
@@ -118,10 +109,11 @@
           <thead>
           <tr>
             <th>No.</th>
-            <th>Class ID</th>
-            <th>Class Name</th>
-            <th>Created Date</th>
-            <th>No. of Students</th>
+            <th>Student ID</th>
+            <th>Student Name</th>
+            <th>Gender</th>
+            <th>Email Address</th>
+            <th>Enrollment Date</th>
             <th>Status</th>
             <th>Actions</th>
           </tr>
@@ -129,146 +121,144 @@
           <tbody>
           <tr>
             <td>1</td>
-            <td>WCTS123</td>
-            <td>Web and Cloud Technology</td>
-            <td>2024-10-16</td>
-            <td>50</td>
+            <td>24-00001</td>
+            <td>Sokha Chhim</td>
+            <td>M</td>
+            <td>sokha.c@rupp.edu.kh</td>
+            <td>24/07/2024</td>
             <td><span class="status-pill">Active</span></td>
             <td class="actions">
-              <a href="class-detail.html"><i class="ri-eye-line" ref=""><span ref=""> Detail</span></i></a>
-              <a class="open-btn" onclick="openSidebar()"><i class="ri-qr-code-line" ><span> Get QR</span></i></a>
+              <a href="student-detail.html"><i class="ri-eye-line" ref=""><span ref=""> Detail</span></i></a>
               <i class="ri-edit-2-line"><span> Edit</span></i>
               <i class="ri-delete-bin-line delete-icon"><span> Delete</span></i>
             </td>
           </tr>
           <tr>
             <td>2</td>
-            <td>CLS124</td>
-            <td>Science 101</td>
-            <td>2024-10-17</td>
-            <td>25</td>
+            <td>24-00002</td>
+            <td>Rithy Phan</td>
+            <td>M</td>
+            <td>rithy.p@rupp.edu.kh</td>
+            <td>15/08/2024</td>
             <td><span class="status-pill">Active</span></td>
             <td class="actions">
-              <i class="ri-eye-line"><span> Detail</span></i>
-              <i class="ri-qr-code-line"><span> Get QR</span></i>
+              <a href="student-detail.html"><i class="ri-eye-line"><span> Detail</span></i></a>
               <i class="ri-edit-2-line"><span> Edit</span></i>
               <i class="ri-delete-bin-line delete-icon"><span> Delete</span></i>
             </td>
           </tr>
           <tr>
             <td>3</td>
-            <td>CLS125</td>
-            <td>History 101</td>
-            <td>2024-10-18</td>
-            <td>28</td>
+            <td>24-00003</td>
+            <td>Vannary Keo</td>
+            <td>F</td>
+            <td>vannary.k@rupp.edu.kh</td>
+            <td>12/06/2024</td>
             <td><span class="status-pill">Active</span></td>
             <td class="actions">
-              <i class="ri-eye-line"><span> Detail</span></i>
-              <i class="ri-qr-code-line"><span> Get QR</span></i>
+              <a href="student-detail.html"><i class="ri-eye-line"><span> Detail</span></i></a>
               <i class="ri-edit-2-line"><span> Edit</span></i>
               <i class="ri-delete-bin-line delete-icon"><span> Delete</span></i>
             </td>
           </tr>
           <tr>
             <td>4</td>
-            <td>CLS126</td>
-            <td>English 101</td>
-            <td>2024-10-19</td>
-            <td>32</td>
+            <td>24-00004</td>
+            <td>Sophea Chan</td>
+            <td>F</td>
+            <td>sophea.c@rupp.edu.kh</td>
+            <td>03/11/2024</td>
             <td><span class="status-pill">Active</span></td>
             <td class="actions">
-              <i class="ri-eye-line"><span> Detail</span></i>
-              <i class="ri-qr-code-line"><span> Get QR</span></i>
+              <a href="student-detail.html"><i class="ri-eye-line"><span> Detail</span></i></a>
               <i class="ri-edit-2-line"><span> Edit</span></i>
               <i class="ri-delete-bin-line delete-icon"><span> Delete</span></i>
             </td>
           </tr>
           <tr>
             <td>5</td>
-            <td>CLS127</td>
-            <td>Art 101</td>
-            <td>2024-10-20</td>
-            <td>20</td>
+            <td>24-00005</td>
+            <td>Borey Hun</td>
+            <td>M</td>
+            <td>borey.h@rupp.edu.kh</td>
+            <td>22/05/2024</td>
             <td><span class="status-pill">Active</span></td>
             <td class="actions">
-              <i class="ri-eye-line"><span> Detail</span></i>
-              <i class="ri-qr-code-line"><span> Get QR</span></i>
+              <a href="student-detail.html"><i class="ri-eye-line"><span> Detail</span></i></a>
               <i class="ri-edit-2-line"><span> Edit</span></i>
               <i class="ri-delete-bin-line delete-icon"><span> Delete</span></i>
             </td>
           </tr>
           <tr>
             <td>6</td>
-            <td>CLS128</td>
-            <td>Geography 101</td>
-            <td>2024-10-21</td>
-            <td>15</td>
+            <td>24-00006</td>
+            <td>Kosal Meas</td>
+            <td>M</td>
+            <td>kosal.m@rupp.edu.kh</td>
+            <td>09/09/2024</td>
             <td><span class="status-pill">Active</span></td>
             <td class="actions">
-              <i class="ri-eye-line"><span> Detail</span></i>
-              <i class="ri-qr-code-line"><span> Get QR</span></i>
+              <a href="student-detail.html"><i class="ri-eye-line"><span> Detail</span></i></a>
               <i class="ri-edit-2-line"><span> Edit</span></i>
               <i class="ri-delete-bin-line delete-icon"><span> Delete</span></i>
             </td>
           </tr>
           <tr>
             <td>7</td>
-            <td>CLS129</td>
-            <td>Physics 101</td>
-            <td>2024-10-22</td>
-            <td>22</td>
+            <td>24-00007</td>
+            <td>Malis Penh</td>
+            <td>F</td>
+            <td>malis.p@rupp.edu.kh</td>
+            <td>14/07/2024</td>
             <td><span class="status-pill">Active</span></td>
             <td class="actions">
-              <i class="ri-eye-line"><span> Detail</span></i>
-              <i class="ri-qr-code-line"><span> Get QR</span></i>
+              <a href="student-detail.html"><i class="ri-eye-line"><span> Detail</span></i></a>
               <i class="ri-edit-2-line"><span> Edit</span></i>
               <i class="ri-delete-bin-line delete-icon"><span> Delete</span></i>
             </td>
           </tr>
           <tr>
             <td>8</td>
-            <td>CLS130</td>
-            <td>Chemistry 101</td>
-            <td>2024-10-23</td>
-            <td>18</td>
+            <td>24-00008</td>
+            <td>Sokmean Lay</td>
+            <td>M</td>
+            <td>sokmean.l@rupp.edu.kh</td>
+            <td>01/04/2024</td>
             <td><span class="status-pill">Active</span></td>
             <td class="actions">
-              <i class="ri-eye-line"><span> Detail</span></i>
-              <i class="ri-qr-code-line"><span> Get QR</span></i>
+              <a href="student-detail.html"><i class="ri-eye-line"><span> Detail</span></i></a>
               <i class="ri-edit-2-line"><span> Edit</span></i>
               <i class="ri-delete-bin-line delete-icon"><span> Delete</span></i>
             </td>
           </tr>
           <tr>
             <td>9</td>
-            <td>CLS131</td>
-            <td>Biology 101</td>
-            <td>2024-10-24</td>
-            <td>27</td>
+            <td>24-00009</td>
+            <td>Rachna Chea</td>
+            <td>F</td>
+            <td>rachna.c@rupp.edu.kh</td>
+            <td>18/03/2024</td>
             <td><span class="status-pill">Active</span></td>
             <td class="actions">
-              <i class="ri-eye-line"><span> Detail</span></i>
-              <i class="ri-qr-code-line"><span> Get QR</span></i>
+              <a href="student-detail.html"><i class="ri-eye-line"><span> Detail</span></i></a>
               <i class="ri-edit-2-line"><span> Edit</span></i>
               <i class="ri-delete-bin-line delete-icon"><span> Delete</span></i>
             </td>
           </tr>
           <tr>
             <td>10</td>
-            <td>CLS132</td>
-            <td>Philosophy 101</td>
-            <td>2024-10-25</td>
-            <td>10</td>
+            <td>24-00010</td>
+            <td>Pich Rath</td>
+            <td>M</td>
+            <td>pich.r@rupp.edu.kh</td>
+            <td>25/10/2024</td>
             <td><span class="status-pill">Active</span></td>
             <td class="actions">
-              <i class="ri-eye-line"><span> Detail</span></i>
-              <i class="ri-qr-code-line"><span> Get QR</span></i>
+              <a href="student-detail.html"><i class="ri-eye-line"><span> Detail</span></i></a>
               <i class="ri-edit-2-line"><span> Edit</span></i>
               <i class="ri-delete-bin-line delete-icon"><span> Delete</span></i>
             </td>
           </tr>
-
-          <!-- More rows as needed -->
           </tbody>
         </table>
         </div>
@@ -287,16 +277,11 @@
           </div>
           <div class="icon-button">
             <i class="ri-arrow-right-s-line ri-xl"></i>
-
           </div>
         </div>
-
-
       </div>
     </div>
-
   </div>
-  <script src="script.js"></script> <!-- Include your script here -->
-
+    <script src="script.js"></script> <!-- Include your script here -->
 </body>
 </html>

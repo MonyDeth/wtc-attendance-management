@@ -20,11 +20,38 @@
     </div>
     <nav class="menu">
       <ul>
-        <li><a href="admin-login.html"><i class="ri-inbox-2-line"></i> Login Page</a></li>
-        <li><a href="admin-landing.html" class="active"><i class="ri-information-2-line"></i> Landing Page</a></li>
+        <li><a href="admin-landing.html" class="active"><i class="ri-information-2-line"></i> Homepage</a></li>
         <li><a href="class-listing.html"><i class="ri-graduation-cap-line"></i> Class Management</a></li>
+        <li><a href="student-listing.html"><i class="ri-file-2-line"></i> Student Management</a></li>
+        <li><a href="user-listing.html"><i class="ri-user-line"></i> User Management</a></li>
       </ul>
+      <label for="profile-toggle" class="avatar-container">
+        <img class="avatar" src="images/avatar.png" alt="logo">
+      </label>
+
+      <!-- Hidden checkbox to toggle modal -->
+      <input type="checkbox" id="profile-toggle" class="toggle-checkbox">
+
+      <!-- Profile modal -->
+      <div class="profile-modal">
+        <div class="profile-title-wrapper">
+          <div class="profile-img-wrapper">
+            <img class="profile-img" src="images/avatar.png" alt="profile">
+            <button class="edit-btn"><i class="ri-edit-line"></i></button>
+          </div>
+        <h1>Kruy Kimhong</h1>
+        <p class="subj-id-container">Admin</p>
+        </div>
+
+        <div class="menu-list">
+          <div class="button-line"><i class="ri-user-3-line"></i> Profile</div>
+          <div class="button-line"><i class="ri-lock-password-line"></i> Change Passwords</div>
+          <div class="button-line red"><i class="ri-logout-box-line"></i> Log out</div>
+        </div>
+      </div>
+
     </nav>
+
   </header>
 
   <div
