@@ -22,7 +22,9 @@
     "webpack-merge": "^5.10.0"
   },
   "dependencies": {
+    "express": "^4.21.1",
     "html2canvas": "^1.4.1",
+    "mysql": "^2.18.1",
     "remixicon": "^4.3.0"
   }
 }
